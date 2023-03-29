@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- Include Bootstrap’s CSS and JS. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- Include the icon fonts stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <h1 class="display-1">Hello there, Bootstrap!</h1>
+    <a href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/" target="_blank">Bootstrap 5 Cheatsheet</a>
+
+
+    <h1>Grid System</h1>
+    <ul>
+        <li>Bootstrap's grid system can adapt across all six default breakpoints, and any breakpoints you customize.
+            Breakpoints are based on
+            min-width media queries</li>
+        <li>Rows are wrappers for columns. ("row", "col")</li>
+        <li>Columns are flexible. There are 12 template columns available per row. Column classes indicate the number of
+            template columns to span (e.g., col-4 spans four).</li>
+    </ul>
+    <h2>Breakpoints</h2>
+    <p> xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px</p>
+    <!-- Use the "d-print" class to hide this element on screen -->
+
+
+
+    <h2>Equal width</h2>
+    <p>Add any number of unit-less classes. Use <code>col</code></p>
+    <div class="container border border-primary text-center">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col bg-info">
+                1 of 3
+            </div>
+            <div class="col bg-danger">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+
+    <div class=" container-fluid my-2 p-3 bg-primary text-white">
+        <div class="row">
+            <div class="col-1 bg-secondary">
+                col-1 #1
+            </div>
+            <div class="col-1 bg-success">
+                col-1 #2
+            </div>
+            <div class="col-1 bg-danger">
+                col-1 #3
+            </div>
+            <div class="col-1 bg-warning">
+                col-1 #4
+            </div>
+            <div class="col-1 bg-info">
+                col-1 #5
+            </div>
+            <div class="col-1 bg-light">
+                col-1 #6
+            </div>
+            <div class="col-1 bg-dark">
+                col-1 #7
+            </div>
+            <div class="col-1 bg-dark">
+                col-1 #8
+            </div>
+            <div class="col-1 bg-dark">
+                col-1 #9
+            </div>
+            <div class="col-1 bg-dark">
+                col-1 #10
+            </div>
+            <div class="col-1 bg-dark">
+                col-1 #11
+            </div>
+            <div class="col-1 bg-dark">
+                col-1 #12
+            </div>
+        </div>
+    </div>
+    <h2>Setting one column width</h2>
+    <p>you can set the width of one column. Use <code>col-size</code></p>
+    <div class="row mt-4">
+        <div class="col-2 bg-info">
+            col-2
+        </div>
+        <div class="col-4 bg-success">
+            col-4
+        </div>
+        <div class="col-6 bg-danger">
+            col-6
+        </div>
+    </div>
+
+
+    </div>
+
+    <h2>Variable width content</h2>
+    <p>
+        Use <code>col-{breakpoint}-size</code> classes to size columns based on the natural width of their content.</p>
+
+    <div class="container text-center">
+        <div class="row mt-4">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 bg-info">
+                col-sm-6 col-lg-4 col-xxl-3
+                <ul>
+                    <li>If the screen size is at least sm, then column width: 50% (6/12)</li>
+                    <li>If the screen size is at least lg, then column width: 33% (4/12)</li>
+                    <li>If the screen size is at least xxl, then column width: 25% (3/12)</li>
+                </ul>
+
+                The smaller screen size, the larger the percentage should be (think of viewing thumbs on mobile)
+            </div>
+            <div class="col bg-success">
+                col
+            </div>
+            <div class="col bg-danger">
+                col
+            </div>
+        </div>
+    </div>
+
+    <h2>Row columns</h2>
+    <p>Use the responsive <code>.row-cols-{breakpoint}-numberOfColumns</code> classes to quickly set the number of
+        columns that best render your content and layout. Row columns classes are set on the parent .row as a shortcut
+    </p>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-3">
+            <!-- Repeat this div for each image -->
+            <div class="col">
+                <img src="assets/images/potter1.webp" alt="Image 1" class="img-fluid">
+            </div>
+            <div class="col">
+                <img src="assets/images/potter1.webp" alt="Image 2" class="img-fluid">
+            </div>
+            <div class="col">
+                <img src="assets/images/potter1.webp" alt="Image 3" class="img-fluid">
+            </div>
+            <!-- End of repeated div -->
+        </div>
+    </div>
+
+
+    <p>
+        Bootstrap comes with three different containers:
+        <ul>
+            <li>container, which sets a max-width at each responsive breakpoint</li>
+            <li>container-{breakpoint}, which is width: 100% until the specified breakpoint</li>
+            <li>container-fluid, which is width: 100% at all breakpoints</li>
+        </ul>
+
+    </p>
+
+    <div class="container p-3 m-3 bg-primary text-white">
+        <h1>Container</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nostrum molestias! Eveniet,
+            laboriosam nisi. Saepe eveniet sed, a iure, dolore omnis nulla voluptas ullam, illo ad veniam adipisci
+            ducimus natus?</p>
+    </div>
+    <div class="container-sm p-3 m-3 bg-secondary text-white">
+        <h1>container-sm</h1>
+        <p>Min-width of screen should be at least sm, can be bigger. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit.
+            Reprehenderit, nostrum molestias! Eveniet,
+            laboriosam nisi. Saepe eveniet sed, a iure, dolore omnis nulla voluptas ullam, illo ad veniam adipisci
+            ducimus natus?</p>
+    </div>
+    <div class="container-md p-3 m-3 bg-dark text-white">
+        <h1>container-md</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nostrum molestias! Eveniet,
+            laboriosam nisi. Saepe eveniet sed, a iure, dolore omnis nulla voluptas ullam, illo ad veniam
+            adipisci
+            ducimus natus?</p>
+    </div>
+    <div class="container-lg p-3 m-3 bg-success text-white">
+        <h1>container-lg</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nostrum molestias! Eveniet,
+            laboriosam nisi. Saepe eveniet sed, a iure, dolore omnis nulla voluptas ullam, illo ad veniam
+            adipisci
+            ducimus natus?</p>
+    </div>
+    <div class="container-xl p-3 m-3 bg-warning text-white">
+        <h1>container-xl</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nostrum molestias! Eveniet,
+            laboriosam nisi. Saepe eveniet sed, a iure, dolore omnis nulla voluptas ullam, illo ad veniam
+            adipisci
+            ducimus natus?</p>
+    </div>
+    <div class="container-xxl p-3 m-3 bg-warning text-white">
+        <h1>container-xxl</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nostrum molestias! Eveniet,
+            laboriosam nisi. Saepe eveniet sed, a iure, dolore omnis nulla voluptas ullam, illo ad veniam
+            adipisci
+            ducimus natus?</p>
+    </div>
+    <div class="container-fluid p-3 bg-warning text-white">
+        <h1>container-fluid</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nostrum molestias! Eveniet,
+            laboriosam nisi. Saepe eveniet sed, a iure, dolore omnis nulla voluptas ullam, illo ad veniam
+            adipisci
+            ducimus natus?</p>
+    </div>
+
+    <footer class="footer fixed-bottom bg-dark text-white">
+        <span>The current screen width is: <span id="screen-width" class="d-print badge bg-primary"></span></span>
+        <span>Current Breakpoint:
+            <span class="d-inline-block d-sm-none">xs</span>
+            <span class="d-none d-sm-inline-block d-md-none">sm</span>
+            <span class="d-none d-md-inline-block d-lg-none">md</span>
+            <span class="d-none d-lg-inline-block d-xl-none">lg</span>
+            <span class="d-none d-xl-inline-block d-xxl-none"">xl</span>
+        <span class=" d-none d-xxl-inline-block">xxl</span>
+        </span>
+    </footer>
+
+    <!-- Include Bootstrap’s CSS JS before the closing body. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
+
+    <!-- Write JavaScript to update the screen width on page load and window resize -->
+    <script>
+        // Get the screen width element
+        const screenWidthElement = document.getElementById('screen-width');
+
+        // Function to update the screen width on page load and window resize
+        function updateScreenWidth() {
+            screenWidthElement.innerText = `${window.innerWidth}px`;
+        }
+
+        // Call the function on page load and window resize
+        window.addEventListener('load', updateScreenWidth);
+        window.addEventListener('resize', updateScreenWidth);
+    </script>
+</body>
+
+</html>

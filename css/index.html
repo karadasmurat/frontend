@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .box {
+            display: flex;
+        }
+
+        header {
+            background: purple;
+            height: 100px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            /* align the flex items on main axis */
+            justify-content: space-between;
+
+            /* align our item on the cross axis */
+            align-items: flex-end;
+
+            background-color: DodgerBlue;
+            height: 200px;
+        }
+
+        .flex-container>div {
+            background-color: #f1f1f1;
+            width: 150px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .comment {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="display-1">Hello there, CSS!</h1>
+    <div class="circle">circle</div>
+    Flexbox is a one-dimensional layout method for arranging items in rows or columns.
+    <br> Items flex (expand) to fill additional space or shrink to fit into smaller spaces.
+    <br>Flexbox makes a lot of layout tasks much easier.
+    <br> To create a flex container, we set the value of the area's container's <code>display</code> property to
+    <code>flex</code> or
+    <code>inline-flex</code>.
+    As soon as we do this the direct children of that container become flex items.
+    <p>When elements are laid out as flex items, they are laid out along two axes:
+        <ul>
+            <li>main axis (with <strong>main start</strong> and <strong>main end</strong>).</li>
+            <li>cross axis (with <strong>cross start</strong> and <strong>cross end</strong>)</li>
+        </ul>
+    </p>
+    <p>Flexbox provides a property called <code>flex-direction</code> that specifies which direction the main axis runs
+        (which direction the flexbox children are laid out in). By default this is set to row</p>
+
+    <pre>.flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            <span class="comment">/* align the flex items on main axis */</span>
+            justify-content: space-between;
+
+            <span class="comment">/* align our item on the cross axis */</span>
+            align-items: flex-end;
+
+            background-color: DodgerBlue;
+            height: 200px;
+        }</pre>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+pre {
+    background-color: #f4f4f4;
+    /* color: #d63384; */
+    /* sets the background color */
+    border: 1px solid #ddd;
+    /* adds a border */
+    border-radius: 5px;
+    /* rounds the corners of the border */
+    font-family: SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+    /* sets the font family */
+    font-size: .875em;
+    /* sets the font size */
+    line-height: 1.5;
+    /* sets the line height */
+    overflow-x: auto;
+    /* adds a horizontal scrollbar if the code block overflows */
+    padding: 10px;
+    /* adds some padding around the code block */
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: coral;
+    align-items: center;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
